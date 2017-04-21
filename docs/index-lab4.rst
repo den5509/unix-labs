@@ -4,6 +4,9 @@
 Работа №4
 ##############################
 
+.. include:: ../docs/text/001_Lab4Description.rst
+
+
 ..  toctree::
     :maxdepth: 1
     :glob:
