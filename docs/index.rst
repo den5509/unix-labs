@@ -11,7 +11,7 @@
 ----
 
 #################
-:ref:`Работа #4`
+:ref:`lab4`
 #################
 
 .. include:: ../docs/text/001_Lab4Description.rst
