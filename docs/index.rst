@@ -3,7 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Операционные системы GNU/Linux
+Отчеты о лабораторных работах по дисциплине:
+``Операционные системы GNU/Linux``
 =====================================
 
 .. toctree::
@@ -11,4 +12,11 @@
    :caption: Contents:
 
 .. include:: ../docs/text/000_Introduction.rst
+
+----
+
 .. include:: ../blank/author.rst
+
+----
+
+kk
