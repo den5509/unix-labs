@@ -11,3 +11,4 @@
    :caption: Contents:
 
 .. include:: ../docs/text/000_Introduction.rst
+.. include:: ../blank/author.rst
