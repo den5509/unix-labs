@@ -14,7 +14,7 @@
 :ref:`lab4`
 #################
 
-.. include:: ../docs/text/001_Lab4Description.rst
+.. include:: ../docs/text/040_Lab4Description.rst
 
 .. toctree::
    :hidden:
