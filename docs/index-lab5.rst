@@ -1,10 +1,10 @@
-.. _lab4:
+.. _lab5:
 
 ##############################
-Работа №4
+Работа №5
 ##############################
 
-.. include:: ../docs/text/040_Lab4Description.rst
+.. include:: ../docs/text/051_Lab5Description.rst
 
 ..  toctree::
     :maxdepth: 1
@@ -13,19 +13,19 @@
 Цель работы
 ===========
 
-.. include:: ../docs/text/041_Lab4Goal.rst
+.. include:: ../docs/text/051_Lab5Goal.rst
 
 Выполнение работы
 =================
 
-.. include:: ../blank/lab4_report.rst
+.. include:: ../blank/lab5_report.rst
 
 Команда на запуск контейнера
 ============================
 
-.. include:: ../blank/lab4_container.rst
+.. include:: ../blank/lab5_container.rst
 
 Выводы
 ======
 
-.. include:: ../blank/lab4_conclusion.rst
+.. include:: ../blank/lab5_conclusion.rst
