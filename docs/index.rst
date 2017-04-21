@@ -10,4 +10,4 @@
    :maxdepth: 2
    :caption: Contents:
 
-.. include:: ../docs/000_Introduction.rst
+.. include:: /text/000_Introduction.rst
