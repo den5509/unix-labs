@@ -1,15 +1,6 @@
-.. unix-labs documentation master file, created by
-   sphinx-quickstart on Fri Apr 21 08:20:24 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Отчеты о лабораторных работах по дисциплине:
-``Операционные системы GNU/Linux``
-=====================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+#######################################
+Операционные системы GNU/Linux
+#######################################
 
 .. include:: ../docs/text/000_Introduction.rst
 
@@ -19,4 +10,16 @@
 
 ----
 
-kk
+#################
+:ref:`lab4-label`
+#################
+
+.. include:: ../docs/text/001_Lab4Description.rst
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   index-lab4.rst
+
+----
