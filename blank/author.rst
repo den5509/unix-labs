@@ -9,5 +9,3 @@
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   
-.. include:: 000_Introduction.rst
