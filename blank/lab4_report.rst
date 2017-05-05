@@ -28,20 +28,13 @@
 
 .. topic:: lab4.c
 
-    #include <sys/types.h>
-    
-    #include <unistd.h>
-    
+    #include <sys/types.h>    
+    #include <unistd.h>    
     #include <stdio.h>
-
     #include "lab4.h"
-
-    int main(){
-    
-        pid_t pid, ppid;
-        
-        int a =  0; 
-        
+    int main(){    
+        pid_t pid, ppid;        
+        int a =  0;         
         int b =  100; 
         
         (void)fork();
