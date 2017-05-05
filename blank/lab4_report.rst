@@ -15,41 +15,40 @@
 
     #include "lab4.h"
 
-int main(){
-
-    pid_t pid, ppid;
+    int main(){
     
-    int a =  0; 
-    
-    int b =  100; 
-    
-    (void)fork();
-    
-    pid = getpid();
-    
-    ppid = getppid();
-    
-
-    if(fork() == -1){
-    
-        printf("error");
+        pid_t pid, ppid;
         
-    } else if (fork() == 0){
-    
-        a = DO_A(a);  
-         
-      printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\n",(int)pid,(int)ppid,a,b);
-      
-    } else {
-    
-      b = DO_B(b);
-      
-      printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
+        int a =  0; 
+        
+        int b =  100; 
+        
+        (void)fork();
+        
+        pid = getpid();
+        
+        ppid = getppid();
+        
+        if(fork() == -1){
+        
+            printf("error");
+            
+        } else if (fork() == 0){
+        
+            a = DO_A(a);  
+             
+          printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\n",(int)pid,(int)ppid,a,b);
+          
+        } else {
+        
+          b = DO_B(b);
+          
+          printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
+        }
+        
+        return 0;
+        
     }
-    
-    return 0;
-    
-}
 
 
 Компиляция программы и установка её в каталог bin каталога work.
