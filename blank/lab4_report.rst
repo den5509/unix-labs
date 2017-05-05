@@ -5,9 +5,13 @@
 Содержимое файлов исходных текстов программ.
 
 
-.. topic:: Любой заголовок
+.. topic:: lab4.c
 
-  Любая строка
+    #include <sys/types.h>
+    #include <unistd.h>
+    #include <stdio.h>
+
+    #include "lab4.h"
 
 
 Компиляция программы и установка её в каталог bin каталога work.
