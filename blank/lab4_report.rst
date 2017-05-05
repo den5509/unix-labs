@@ -97,13 +97,14 @@
     }
     
 
-.. topic:: pr_a.c
+Файл **pr_a.c**
 
 .. code-block:: c
 
     int pr_b( int x ){    
         return x + 1 ;        
     }
+    
 
 .. topic:: pr_b.c
 
