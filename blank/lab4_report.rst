@@ -51,6 +51,63 @@
     }
 
 
+.. topic:: lab4.h
+
+    #ifndef DO_A
+    
+    #define DO_A(X) pr_a(X);
+    
+    #endif /*DO_A*/
+    
+    #ifndef DO_B
+    
+    #define DO_B(X) pr_b(X);
+    
+    #endif /*DO_B*/
+
+
+.. topic:: pr_a.c
+
+    int pr_a( int x ){
+    
+        return x + 1;
+        
+    }
+
+
+.. topic:: pr_b.c
+
+    int pr_b( int x ){
+    
+        return x + 1 ;
+        
+    }
+
+
+.. topic:: Makefile
+
+    lab4:	lab4.o pr_a.o pr_b.o lab4.h
+    		gcc lab4.o pr_a.o pr_b.o -o lab4 -lm
+    
+    pr_a.o: pr_a.c
+    		gcc -c pr_a.c
+    
+    pr_b.o:	pr_b.c
+    		gcc -c pr_b.c
+    
+    lab4.o:	lab4.c lab4.h
+    		gcc -c lab4.c
+    
+    clean:
+    		rm -f lab4 lab4.o pr_a.o pr_b.o
+    
+    install:
+    		cp lab4 bin/lab4
+    
+    uninstall: 
+    		rm -f bin/lab4
+
+
 Компиляция программы и установка её в каталог bin каталога work.
 
 Список файлов в каталоге work/bin в подробном формате.
