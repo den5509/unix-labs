@@ -88,7 +88,7 @@
 
 Файл **Makefile**
 
-.. code-block::
+.. code-block:: bash
 
     lab4:	lab4.o pr_a.o pr_b.o lab4.h
     		gcc lab4.o pr_a.o pr_b.o -o lab4 -lm
