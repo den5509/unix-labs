@@ -29,6 +29,7 @@
 Файл **lab4.c**
 
 .. code-block:: c
+
     #include <sys/types.h>
     #include <unistd.h>
     #include <stdio.h>
@@ -39,20 +40,20 @@
         pid_t pid, ppid;
         int a =  0;
         int b =  100;
-    (void)fork();
-    pid = getpid();
-    ppid = getppid();
-    if(fork() == -1){
-        printf("error");
-    } else if (fork() == 0){
-        a = DO_A(a);
-        printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\n",(int)pid,(int)ppid,a,b);
-    } else {
-        b = DO_B(b);
-        printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
+        (void)fork();
+        pid = getpid();
+        ppid = getppid();
+        if(fork() == -1){
+            printf("error");
+        } else if (fork() == 0){
+            a = DO_A(a);
+            printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\n",(int)pid,(int)ppid,a,b);
+        } else {
+            b = DO_B(b);
+            printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
+        }
+        return 0;
     }
-    return 0;
-}
 
 
 Файл **lab4.h**
@@ -70,6 +71,7 @@
 Файл **pr_a.c**
 
 .. code-block:: c
+
     int pr_a( int x ){
         return x + 1;
     }
@@ -78,6 +80,7 @@
 Файл **pr_b.c**
 
 .. code-block:: c
+
     int pr_b( int x ){
         return x + 1 ;
     }
