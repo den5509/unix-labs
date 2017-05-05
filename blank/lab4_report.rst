@@ -26,7 +26,7 @@
 Содержимое файлов исходных текстов программ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tip:: lab4.c
+.. note:: lab4.c
 
     #include <sys/types.h>
     
@@ -72,7 +72,7 @@
     }
 
 
-.. topic:: lab4.h
+.. note:: lab4.h
 
     #ifndef DO_A
     
@@ -87,7 +87,7 @@
     #endif /*DO_B*/
 
 
-.. topic:: pr_a.c
+.. note:: pr_a.c
 
     int pr_a( int x ){
     
@@ -96,7 +96,7 @@
     }
 
 
-.. topic:: pr_b.c
+.. note:: pr_b.c
 
     int pr_b( int x ){
     
@@ -105,7 +105,7 @@
     }
 
 
-.. topic:: Makefile
+.. note:: Makefile
 
     lab4:	lab4.o pr_a.o pr_b.o lab4.h
     		gcc lab4.o pr_a.o pr_b.o -o lab4 -lm
