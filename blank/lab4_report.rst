@@ -26,12 +26,15 @@
 Содержимое файлов исходных текстов программ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. topic:: lab4.c
+.. important:: 
 
     lab4.c
         #include <sys/types.h>
+    
         #include <unistd.h>
+    
         #include <stdio.h>
+
         #include "lab4.h"
 
     int main(){
