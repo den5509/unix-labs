@@ -26,85 +26,56 @@
 Содержимое файлов исходных текстов программ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. important:: 
+Файл **lab4.c**
+.. code-block:: c
+    #include <sys/types.h>
+    #include <unistd.h>
+    #include <stdio.h>
 
-    lab4.c
-        #include <sys/types.h>
-    
-        #include <unistd.h>
-    
-        #include <stdio.h>
+    #include "lab4.h"
 
-        #include "lab4.h"
-
-        int main(){
-        
-            pid_t pid, ppid;
-            
-            int a =  0; 
-            
-            int b =  100; 
-            
-            (void)fork();
-            
-            pid = getpid();
-            
-            ppid = getppid();
-            
-            if(fork() == -1){
-            
-                printf("error");
-                
-            } else if (fork() == 0){
-            
-                a = DO_A(a);  
-                 
-              printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\n",(int)pid,(int)ppid,a,b);
-              
-            } else {
-            
-              b = DO_B(b);
-              
-              printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
-            }
-            
-            return 0;
-            
-        }
-
-
-.. topic:: lab4.h
-
-    #ifndef DO_A
-    
-    #define DO_A(X) pr_a(X);
-    
-    #endif /*DO_A*/
-    
-    #ifndef DO_B
-    
-    #define DO_B(X) pr_b(X);
-    
-    #endif /*DO_B*/
-
-
-.. topic:: pr_a.c
-
-    int pr_a( int x ){
-    
-        return x + 1;
-        
+    int main(){
+        pid_t pid, ppid;
+        int a =  0;
+        int b =  100;
+    (void)fork();
+    pid = getpid();
+    ppid = getppid();
+    if(fork() == -1){
+        printf("error");
+    } else if (fork() == 0){
+        a = DO_A(a);
+        printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\n",(int)pid,(int)ppid,a,b);
+    } else {
+        b = DO_B(b);
+        printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
     }
-    
+    return 0;
+}
 
-Файл **pr_a.c**
 
+Файл **lab4.h**
 .. code-block:: c
 
-    int pr_b( int x ){    
-        return x + 1 ;        
+    #ifndef DO_A
+    #define DO_A(X) pr_a(X);
+    #endif /*DO_A*/
+    #ifndef DO_B
+    #define DO_B(X) pr_b(X);
+    #endif /*DO_B*/
+
+.. topic:: pr_a.c
+    int pr_a( int x ){
+        return x + 1;
     }
-    
+
+
+Файл **pr_a.c**
+.. code-block:: c
+    int pr_b( int x ){
+        return x + 1 ;
+    }
+
 
 .. topic:: pr_b.c
 
