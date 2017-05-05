@@ -95,10 +95,11 @@
         return x + 1;
         
     }
+    
 
+.. topic:: pr_a.c
 
-.. code-block:: с
-   :emphasize-lines: 1-3,5
+.. code-block:: c
 
     int pr_b( int x ){    
         return x + 1 ;        
