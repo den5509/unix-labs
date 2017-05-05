@@ -3,6 +3,18 @@
 Список файлов в каталоге work в подробном формате
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. glossary::
+
+  ks -l
+    total 28
+    -rwxrwxrwx 1 root root  277 May  5 05:05 Makefile
+    drwxrwxrwx 2 root root 4096 May  5 05:05 bin
+    -rwxrwxrwx 1 root root  384 May  5 05:05 lab04.txt
+    -rwxrwxrwx 1 root root  573 May  5 05:05 lab4.c
+    -rwxrwxrwx 1 root root  122 May  5 05:05 lab4.h
+    -rwxrwxrwx 1 root root   39 May  5 05:05 pr_a.c
+    -rwxrwxrwx 1 root root   40 May  5 05:05 pr_b.c
+
 
 Содержимое файлов исходных текстов программ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
