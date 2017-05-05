@@ -59,13 +59,13 @@
             
                 a = DO_A(a);  
                  
-              printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\\n",(int)pid,(int)ppid,a,b);
+              printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\n",(int)pid,(int)ppid,a,b);
               
             } else {
             
               b = DO_B(b);
               
-              printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\\n",(int)pid,(int)ppid,a,b);
+              printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
             }
             
             return 0;
@@ -96,6 +96,13 @@
         
     }
 
+
+.. code-block:: с
+   :emphasize-lines: 1-3,5
+
+    int pr_b( int x ){    
+        return x + 1 ;        
+    }
 
 .. topic:: pr_b.c
 
