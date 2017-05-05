@@ -27,6 +27,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Файл **lab4.c**
+
 .. code-block:: c
     #include <sys/types.h>
     #include <unistd.h>
@@ -55,6 +56,7 @@
 
 
 Файл **lab4.h**
+
 .. code-block:: c
 
     #ifndef DO_A
@@ -64,25 +66,20 @@
     #define DO_B(X) pr_b(X);
     #endif /*DO_B*/
 
-.. topic:: pr_a.c
+
+Файл **pr_a.c**
+
+.. code-block:: c
     int pr_a( int x ){
         return x + 1;
     }
 
 
-Файл **pr_a.c**
+Файл **pr_b.c**
+
 .. code-block:: c
     int pr_b( int x ){
         return x + 1 ;
-    }
-
-
-.. topic:: pr_b.c
-
-    int pr_b( int x ){
-    
-        return x + 1 ;
-        
     }
 
 
