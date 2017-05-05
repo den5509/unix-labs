@@ -7,14 +7,11 @@
 
 .. code-block:: text
 
-    total 28
-    -rwxrwxrwx 1 root root  277 May  5 05:05 Makefile
-    drwxrwxrwx 2 root root 4096 May  5 05:05 bin
-    -rwxrwxrwx 1 root root  384 May  5 05:05 lab04.txt
-    -rwxrwxrwx 1 root root  573 May  5 05:05 lab4.c
-    -rwxrwxrwx 1 root root  122 May  5 05:05 lab4.h
-    -rwxrwxrwx 1 root root   39 May  5 05:05 pr_a.c
-    -rwxrwxrwx 1 root root   40 May  5 05:05 pr_b.c
+    total 16
+    -rwxrwxrwx 1 root root  157 May  5 11:13 Makefile
+    drwxrwxrwx 2 root root 4096 May  5 11:13 bin
+    -rwxrwxrwx 1 root root  183 May  5 11:13 lab05.txt
+    -rwxrwxrwx 1 root root  935 May  5 11:13 lab5.c
 
 Содержимое файлов исходных текстов программ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -23,27 +20,38 @@
 
 .. code-block:: c
 
-    #include <sys/types.h>
     #include <unistd.h>
     #include <stdio.h>
 
-    #include "lab4.h"
-
-    int main(){
-        pid_t pid, ppid;
-        int a =  0;
-        int b =  100;
-        (void)fork();
-        pid = getpid();
-        ppid = getppid();
-        if(fork() == -1){
-            printf("error");
-        } else if (fork() == 0){
-            a = DO_A(a);
-            printf("Child My pid = %d, my ppid = %d, result a = %d, result b = %d\n",(int)pid,(int)ppid,a,b);
-        } else {
-            b = DO_B(b);
-            printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
+    int main(int argc, char ** argv, char ** env){
+        char ** ptr;
+        printf("Main process:\n");
+        printf("\tParameters:\n");
+        for( ptr = env; *ptr; ++ptr )
+            printf("\t\t%s\n", *ptr);
+        printf("\n");
+        printf("\tEnvironment:\n");
+        for( ptr = env; *ptr; ++ptr )
+            printf("\t\t%s\n", *ptr);
+        printf("\n");
+        switch( fork() ){
+            case -1:
+                fprintf(stderr, "forkng error\n");
+                return 1;
+                case 0:
+                wait();
+                break;
+            default:
+                printf("Child process:\n");
+                printf("\tParameters:\n");
+                for( ptr = argv; *ptr; ++ptr )
+                    printf("\t\t%s\n", *ptr);
+                printf("\n");
+                printf("\tEnvironment:\n");
+                for( ptr = env; *ptr; ++ptr )
+                    printf("\t\t%s\n", *ptr);
+                printf("\n");
+            break;
         }
         return 0;
     }
@@ -53,26 +61,47 @@
 
 .. code-block:: text
 
-    lab4:	lab4.o pr_a.o pr_b.o lab4.h
-    		gcc lab4.o pr_a.o pr_b.o -o lab4 -lm
+    lab5:	lab5.o
+    		gcc lab5.o -o lab5 -lm
 
-    pr_a.o: pr_a.c
-    		gcc -c pr_a.c
-
-    pr_b.o:	pr_b.c
-    		gcc -c pr_b.c
-
-    lab4.o:	lab4.c lab4.h
-    		gcc -c lab4.c
+    lab5.o:	lab5.c
+    		gcc -c lab5.c
 
     clean:
-    		rm -f lab4 lab4.o pr_a.o pr_b.o
+    		rm -f lab5 lab5.o
 
     install:
-    		cp lab4 bin/lab4
+    		cp lab5 bin/lab5
 
     uninstall:
-    		rm -f bin/lab4
+    		rm -f bin/lab5
+
+
+Компиляция программы и установка её в каталог bin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Трансляция и компановка программы. Команда: **make lab5**
+
+.. code-block:: text
+
+    gcc -c lab5.c
+    gcc lab5.o -o lab5 -lm
+
+
+2. Установка программы в каталог **bin**. Команда: **make install**
+
+.. code-block:: text
+
+    cp lab5 bin/lab5
+
+
+3. Удаление вспомогательных файлов.
+
+Команда: **make clean**
+
+.. code-block:: text
+
+    rm -f lab5 lab5.o
 
 
 
@@ -110,7 +139,7 @@
 		container=docker
 		_=bin/lab5
 
-Child process:
+    Child process:
 	Parameters:
 		bin/lab5
 
