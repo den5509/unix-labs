@@ -3,23 +3,17 @@
 Список файлов в каталоге work в подробном формате
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. glossary::
+**ls -l**
 
-  ls -l
+.. code-block:: text
+
     total 28
-    
     -rwxrwxrwx 1 root root  277 May  5 05:05 Makefile
-    
     drwxrwxrwx 2 root root 4096 May  5 05:05 bin
-    
     -rwxrwxrwx 1 root root  384 May  5 05:05 lab04.txt
-    
     -rwxrwxrwx 1 root root  573 May  5 05:05 lab4.c
-    
     -rwxrwxrwx 1 root root  122 May  5 05:05 lab4.h
-    
     -rwxrwxrwx 1 root root   39 May  5 05:05 pr_a.c
-    
     -rwxrwxrwx 1 root root   40 May  5 05:05 pr_b.c
 
 
@@ -88,7 +82,7 @@
 
 Файл **Makefile**
 
-.. code-block:: bash
+.. code-block:: text
 
     lab4:	lab4.o pr_a.o pr_b.o lab4.h
     		gcc lab4.o pr_a.o pr_b.o -o lab4 -lm
@@ -108,7 +102,7 @@
     install:
     		cp lab4 bin/lab4
 
-    uninstall: 
+    uninstall:
     		rm -f bin/lab4
 
 
