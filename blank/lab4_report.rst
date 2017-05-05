@@ -3,7 +3,7 @@
 Список файлов в каталоге work в подробном формате
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**ls -l**
+Команда: **ls -l**
 
 .. code-block:: text
 
@@ -118,45 +118,33 @@
 Список файлов в каталоге work после очистки
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. glossary::
+Команда: **ls -l**
 
-  ls -l 
+.. code-block:: text
+
     total 28
     -rwxrwxrwx 1 root root  277 May  5 05:05 Makefile
-    
     drwxrwxrwx 2 root root 4096 May  5 05:34 bin
-    
     -rwxrwxrwx 1 root root  384 May  5 05:05 lab04.txt
-    
     -rwxrwxrwx 1 root root  573 May  5 05:05 lab4.c
-    
     -rwxrwxrwx 1 root root  122 May  5 05:05 lab4.h
-    
     -rwxrwxrwx 1 root root   39 May  5 05:05 pr_a.c
-    
     -rwxrwxrwx 1 root root   40 May  5 05:05 pr_b.c
-    
+
 
 Запуск программы
 ^^^^^^^^^^^^^^^^
 
-.. glossary::
+Команда: **bin/lab4**
 
-  bin/lab4  
+.. code-block:: text
+
     Parent My pid = 66, my ppid = 39,result a = 0,result b = 101
-    
     Child My pid = 66, my ppid = 39, result a = 1, result b = 100
-    
     Parent My pid = 67, my ppid = 66,result a = 0,result b = 101
-    
     Parent My pid = 67, my ppid = 66,result a = 0,result b = 101
-    
     Child My pid = 67, my ppid = 66, result a = 1, result b = 100
-    
     Parent My pid = 66, my ppid = 39,result a = 0,result b = 101
-    
     Child My pid = 67, my ppid = 66, result a = 1, result b = 100
-    
     Child My pid = 66, my ppid = 39, result a = 1, result b = 100
-    
-    
+
