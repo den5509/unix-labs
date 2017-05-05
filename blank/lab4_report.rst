@@ -112,6 +112,40 @@
 Компиляция программы и установка её в каталог bin каталога work
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1. Трансляция и компановка программы. Команда: **make lab4**
+
+.. code-block:: text
+
+    gcc -c lab4.c
+    gcc -c pr_a.c
+    gcc -c pr_b.c
+    gcc lab4.o pr_a.o pr_b.o -o lab4 -lm
+
+
+2. Список файлов в каталоге **work**. Команда: **ls -l**
+
+.. code-block:: text
+
+    total 52
+    -rwxrwxrwx 1 root    root     277 May  5 05:05 Makefile
+    drwxrwxrwx 2 root    root    4096 May  5 05:05 bin
+    -rwxrwxrwx 1 root    root     384 May  5 05:05 lab04.txt
+    -rwxrwxr-x 1 student student 8792 May  5 05:34 lab4
+    -rwxrwxrwx 1 root    root     573 May  5 05:05 lab4.c
+    -rwxrwxrwx 1 root    root     122 May  5 05:05 lab4.h
+    -rw-rw-r-- 1 student student 2208 May  5 05:34 lab4.o
+    -rwxrwxrwx 1 root    root      39 May  5 05:05 pr_a.c
+    -rw-rw-r-- 1 student student 1232 May  5 05:34 pr_a.o
+    -rwxrwxrwx 1 root    root      40 May  5 05:05 pr_b.c
+    -rw-rw-r-- 1 student student 1232 May  5 05:34 pr_b.o
+
+
+3. Установка программы в каталог **bin**. Команда: **make install**
+
+.. code-block:: text
+
+    cp lab4 bin/lab4
+
 
 Список файлов в каталоге work/bin в подробном формате
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
