@@ -87,6 +87,7 @@
 
 
 Файл **Makefile**
+
 .. code-block:: shell
 
     lab4:	lab4.o pr_a.o pr_b.o lab4.h
