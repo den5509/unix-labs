@@ -213,7 +213,7 @@
     pr_b.h
 
 
-Запуск программы
+Запуск программы в контейнере без автобилда
 ^^^^^^^^^^^^^^^^
 
 Команда: **bin/lab4**
@@ -223,7 +223,15 @@
     My pid = 12489, my ppid = 12462, result a = 0, result b = 99
     My pid = 12490, my ppid = 12489, result a = 1, result b = 100
 
+Запуск программы в контейнере с автобилдом
+^^^^^^^^^^^^^^^^
 
+Команда: **bin/lab4**
+
+.. code-block:: text
+
+    My pid = 37, my ppid = 8, result a = 0, result b = 99
+    My pid = 38, my ppid = 37, result a = 1, result b = 100
 
 
 
