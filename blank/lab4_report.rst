@@ -10,7 +10,9 @@
 Он будет виден при запуске лабораторной работы. 
  .. image:: _static/image/lab4_last.png
 В такой последовательности была выполнена лабораторная работа. Все это было выполнено в контейнере. Далее по окончанию работы был написан Dockerfile, при помощи которого можно построить Automated build и запуск и проверка работы достаточно серьезно упрощаются.
-Dockerfile: FROM ubuntu COPY ./work/ /work/
+Dockerfile: 
+.. include:: ../lab4/Dockerfile
+    :literal:
 COPY init.sh /
 RUN chmod 755 /init.sh
 RUN apt update && apt install -y make gcc
