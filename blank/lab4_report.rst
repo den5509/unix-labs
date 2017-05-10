@@ -79,7 +79,7 @@
 .. code-block:: c
 
     int pr_b( int x ){
-        return x + 1 ;
+        return x - 1 ;
     }
 
 
@@ -218,15 +218,16 @@
 
 .. code-block:: text
 
-    Parent My pid = 24, my ppid = 7,result a = 0,result b = 101
-    Children My pid = 24, my ppid = 7,result a = 1,result b = 100
-    Parent My pid = 25, my ppid = 24,result a = 0,result b = 101
-    Children My pid = 25, my ppid = 24,result a = 1,result b = 100
-    
-    Children My pid = 25, my ppid = 24,result a = 1,result b = 100
-    Parent My pid = 25, my ppid = 24,result a = 0,result b = 101
-    Parent My pid = 24, my ppid = 7,result a = 0,result b = 101
-    Children My pid = 24, my ppid = 7,result a = 1,result b = 100
+Parent My pid = 24, my ppid = 7,result a = 0,result b = 99
+Parent My pid = 25, my ppid = 24,result a = 0,result b = 99
+Parent My pid = 24, my ppid = 7,result a = 0,result b = 99
+Children My pid = 25, my ppid = 24,result a = 1,result b = 100
+Children My pid = 24, my ppid = 7,result a = 1,result b = 100
+Parent My pid = 25, my ppid = 24,result a = 0,result b = 99
+
+Children My pid = 25, my ppid = 24,result a = 1,result b = 100
+Children My pid = 24, my ppid = 7,result a = 1,result b = 100
+
 
 
 
