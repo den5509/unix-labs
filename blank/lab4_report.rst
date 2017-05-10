@@ -25,27 +25,29 @@
     #include <sys/types.h>
     #include <unistd.h>
     #include <stdio.h>
-
+    
     #include "lab4.h"
-
+    
     int main()
     {
-        pid_t pid, ppid;
-        int a =  0; 
-       int b =  100;
-        (void)fork(); 
+       pid_t pid, ppid;
+        int a =  0;
+        int b =  100;
+        int children = fork();
+        if(children == -1) {
+            return 1;
+        }
+
         pid = getpid();
         ppid = getppid();
-
-        if(fork() == -1){
-        	printf("error");
-        } else if (fork() == 0){
+    
+        if(children == 0){
             a = DO_A(a);
-         printf("Children My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
-       } else {
-         b = DO_B(b);
-         printf("Parent My pid = %d, my ppid = %d,result a = %d,result b = %d\n",(int)pid,(int)ppid,a,b);
+        } else {
+          b = DO_B(b);
         }
+         	 printf("My pid = %d, my ppid = %d, result a = %d, result b = %d\n",
+    (int) pid, (int) ppid, a, b);
         return 0;
     }
 
@@ -218,14 +220,10 @@
 
 .. code-block:: text
 
-    Parent My pid = 1059, my ppid = 11,result a = 0,result b = 101
-    Parent My pid = 1060, my ppid = 1059,result a = 0,result b = 101
-    Parent My pid = 1060, my ppid = 1059,result a = 0,result b = 101
-    Children My pid = 1060, my ppid = 1059,result a = 1,result b = 100
-    Children My pid = 1060, my ppid = 1059,result a = 1,result b = 100
-    Parent My pid = 1059, my ppid = 11,result a = 0,result b = 101
-    Children My pid = 1059, my ppid = 11,result a = 1,result b = 100
-    Children My pid = 1059, my ppid = 11,result a = 1,result b = 100
+    My pid = 12489, my ppid = 12462, result a = 0, result b = 99
+    My pid = 12490, my ppid = 12489, result a = 1, result b = 100
+
+
 
 
 
