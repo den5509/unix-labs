@@ -45,9 +45,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'unix-labs'
-copyright = u'2017, Andrey Poznyakov'
-author = u'Andrey Poznyakov'
+project = u'labs-unix'
+copyright = u'2017, Denis Gorelik'
+author = u'Denis Gorelik'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
