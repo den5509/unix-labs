@@ -1,3 +1,3 @@
 .. Заменить на команду для загрузки и запуска своего контейнера
 
-``sudo docker run hello-world``
+``docker run -ti --privileged --rm digitman5509/lab_unix4``
