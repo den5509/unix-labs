@@ -37,17 +37,3 @@
    index-lab5.rst
 
 ----
-
-#################
-:ref:`lab6`
-#################
-
-.. include:: ../docs/text/060_Lab6Description.rst
-
-.. toctree::
-   :hidden:
-   :maxdepth: 1
-
-   index-lab6.rst
-
-----
